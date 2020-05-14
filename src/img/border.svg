@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="222" height="52" viewBox="0 0 222 52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #d0d0d0;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Прямоугольник_4" data-name="Прямоугольник 4" class="cls-1" d="M869,2636h200l-20,50H849Z" transform="translate(-848 -2635)"/>
+</svg>
