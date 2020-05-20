@@ -20,7 +20,7 @@
         .button_promo
             margin-top: 45px
             min-width: 250px
-    div.reasons
+    section.reasons
         height: 400px
         padding: 35px 0 35px 0
         &__wrapper
@@ -30,11 +30,18 @@
                 .reasons__descr
                     font-size: 12px
                     font-weight: 400
-    
+    .carousel .carousel__slider
+        width: 650px
+        img 
+            width: 100%
+        .slick-prev
+            left: -66px
+        .slick-next
+            right: -66px
 
 @media (max-width: 767px)
     .container
-        width: 510px
+        width: 550px
         .promo
             max-height: 550px
         .header
@@ -60,18 +67,27 @@
         .reasons
             &__subheader
                 font-size: 15px
+            &__descr
+                font-size: 12px
+
     .form .title
         font-size: 27px
     .form .form__descr
         margin-top: 50px
 
+    section.carousel
+        height: 600px
+        padding: 60px 0 60px 0
+        .carousel__slider
+            width: 550px
+
+
 
 @media (max-width: 575px)
-    
     .container
         width: 100%
     
-    div.promo
+    section.promo
         height: 500px
         padding: 5px 10px 
         .header
@@ -108,14 +124,15 @@
                 height: 40px
                 width: 200px
             
-    div.reasons
+    section.reasons
         padding: 30px 10px 
-        min-height: 1100px
+        min-height: 1000px
         .reasons__wrapper
             flex-direction: column
             align-items: center
 
             .reasons__item
+                margin-top: 25px
                 max-width: 300px
                 .reasons__subheader
                     font-size: 16px
@@ -123,16 +140,23 @@
                 .reasons__descr
                     font-size: 16px
                     font-weight: 500
-    div.form
+    section.form
         height: 500px
         padding: 50px 10px
-    .form .title
-        font-size: 16px
-        text-align: center
-    .form .form__descr
-        display: none
-    .feed_form
-        margin: 0 auto
+        .title
+            font-size: 22px
+            text-align: center
+        .form__descr
+            display: none
+        
+        .feed_form
+            margin: 35px auto
+
+    section.carousel 
+        height: 310px
+        padding: 40px 0 40px 0
+        .carousel__slider
+            width: 100vw
         
     
        
