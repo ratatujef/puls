@@ -2,10 +2,13 @@
 .catalog
     padding-bottom: 100px
     &__tabs
+        margin: 0 auto
         margin-top: 69px
         display: flex
         justify-content: center
         list-style-type: none
+        padding-left: 0
+        max-width: 100%
     &__tabItem  
         
         width: 220px
@@ -48,6 +51,7 @@
         margin-right: 8px
         margin-left: 8px
         margin-bottom: 20px
+        
         hr 
             margin: 15px 20px
             background-color: #e8e8e8
@@ -56,11 +60,14 @@
             display: flex
             justify-content: space-between
             width: 200%
+            
+            
              
         &__list
             width: 50%
             transform: translateX(0%)
             padding: 0 22px 0 37px
+            transition: 0.5s all
             &_active
                 transform: translateX(-100%)
             .catalog-item__linkBack
@@ -106,6 +113,7 @@
         &__content
             width: 50%
             transform: translateX(-100%)
+            transition: 0.5s all
             &_active
                 transform: translateX(0%)
 

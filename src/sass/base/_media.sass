@@ -38,7 +38,13 @@
             left: -66px
         .slick-next
             right: -66px
-
+    .catalog
+        &__tabContent
+            justify-content: space-between
+        .catalog-item
+            margin-right: 23px
+            margin-left: 23px
+        
 @media (max-width: 767px)
     .container
         width: 550px
@@ -76,16 +82,26 @@
         margin-top: 50px
 
     section.carousel
-        height: 600px
+        min-height: 500px
         padding: 60px 0 60px 0
         .carousel__slider
             width: 550px
+    .catalog
+        &__tabItem
+            width: 200px
+        
+        .catalog-item
+            margin-right: 0
+            margin-left: 0
+            width: 265px
+    .feedback__item
+        align-items: center
 
-
+    
 
 @media (max-width: 575px)
     .container
-        width: 100%
+        width: 100vw
     
     section.promo
         height: 500px
@@ -153,10 +169,27 @@
             margin: 35px auto
 
     section.carousel 
-        height: 310px
+        min-height: 350px
         padding: 40px 0 40px 0
         .carousel__slider
             width: 100vw
         
+    .catalog
+        padding-bottom: 50px
+        &__tabs
+            flex-direction: column
+            align-items: center
+            .catalog__tabItem
+                width: 280px
+        &__tabContent
+            justify-content: center
+        .catalog-item
+            width: 300px
     
-       
+    .feedback
+        .feedback__item
+            flex-direction: column
+            margin-bottom: 50px
+        .feedback__text
+            margin-top: 20px
+            margin-left: 20px
