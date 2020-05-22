@@ -35,6 +35,17 @@ $(document).ready(function () {
         })
     })
 
+    $('[data-modal=consultation]').on('click', function () {
+        $('.modal, #consultation').fadeIn();
+    })
+    $('.modal__close').on('click', function () {
+        $('.modal, #consultation, #order, #thanks').fadeOut();
+    })
+    $('.button_catalog').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal-form__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.modal, #order').fadeIn();
+        })
+    })
 });
-
 
