@@ -15,7 +15,7 @@
 
 <body>
 
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <div class="header">
                 <a href="#" class="header__logo"><img src="img/logo_bg.png" alt="logo"></a>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="reasons__item">
-                    <img src="img/icons/heart.png" alt="heart">
+                    <img src="img/icons/heart.png" alt="heart" id="heart">
                     <div class="reasons__subheader">Заботимся о здоровье</div>
                     <div class="reasons__descr">Мы работаем для того,
                         чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -80,9 +80,9 @@
                 и мы перезвоним вам в течении 10 минут
             </div>
             <form action="#" class="feed-form">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш Email" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш Email" type="email">
                 <button class="button button_form">Заказать консультацию</button>
             </form>
         </div>
@@ -568,9 +568,9 @@
                 и мы перезвоним вам в течении 10 минут
             </div>
             <form action="#" class="feed-form feed-form_modal">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш Email" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш Email" type="email">
                 <button class="button button_form">Заказать консультацию</button>
             </form>
         </div>
@@ -581,9 +581,9 @@
                 Пульсометр Polar FT1
             </div>
             <form action="#" class="feed-form feed-form_modal">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш Email" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш Email" type="email">
                 <button class="button button_form">Купить</button>
             </form>
         </div>
@@ -594,10 +594,14 @@
                 в ближайшее время!</div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <a href="#up" class="toUp"><img src="img/icons/arrow.svg" alt="Up"></a>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 
 

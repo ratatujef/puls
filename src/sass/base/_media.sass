@@ -112,108 +112,113 @@
     
 
 @media (max-width: 575px)
-    .container
-        width: 100vw
-    
-    section.promo
-        height: 500px
-        padding: 5px 10px 
-        .header
-            .header__logo
-                width: 45%
-            .header__contact
-                width: 45%
-            
-            .button
-                display: none
-            .header__tel
-                width: 100%
-                font-size: 15px
+    body
+        max-width: 100%
+        .container
+            width: 95vw
 
-        
-            &__official
-                display: none
-        .promo__wrapper
-            .promo__header
-                display: block
-                margin: 10px auto
-                font-size: 25px
-            .promo__subheader
-                text-align: center
-                display: block
-                margin: 0 auto
-                font-size: 18px
-            .promo__icons
-                max-width: 310px
-                .promo__icon
-                    font-size: 12px
-            .button_promo
+        section.promo
+            height: 500px
+            padding: 5px 10px 
+            .header
+                .header__logo
+                    width: 45%
+                .header__contact
+                    width: 45%
                 
-                height: 40px
-                width: 200px
+                .button
+                    display: none
+                .header__tel
+                    width: 100%
+                    font-size: 15px
+
             
-    section.reasons
-        padding: 30px 10px 
-        min-height: 1000px
-        .reasons__wrapper
-            flex-direction: column
-            align-items: center
+                &__official
+                    display: none
+            .promo__wrapper
+                .promo__header
+                    display: block
+                    margin: 10px auto
+                    font-size: 25px
+                .promo__subheader
+                    text-align: center
+                    display: block
+                    margin: 0 auto
+                    font-size: 18px
+                .promo__icons
+                    max-width: 310px
+                    .promo__icon
+                        font-size: 12px
+                .button_promo
+                    
+                    height: 40px
+                    width: 200px
+                
+        section.reasons
+            padding: 30px 10px 
+            min-height: 1000px
+            .reasons__wrapper
+                flex-direction: column
+                align-items: center
 
-            .reasons__item
-                margin-top: 25px
-                max-width: 300px
-                .reasons__subheader
-                    font-size: 16px
-                    font-weight: 700
-                .reasons__descr
-                    font-size: 16px
-                    font-weight: 500
-    section.form
-        height: 500px
-        padding: 50px 10px
-        .title
-            font-size: 22px
-            text-align: center
-        .form__descr
-            display: none
-        
-        .feed_form
-            margin: 35px auto
+                .reasons__item
+                    margin-top: 25px
+                    max-width: 300px
+                    .reasons__subheader
+                        font-size: 16px
+                        font-weight: 700
+                    .reasons__descr
+                        font-size: 16px
+                        font-weight: 500
+        section.form
+            min-height: 500px
+            padding: 50px 10px
+            .title
+                font-size: 22px
+                text-align: center
+            .form__descr
+                display: none
+            
+            .feed_form
+                margin: 35px auto
 
-    section.carousel 
-        min-height: 350px
-        padding: 40px 0 40px 0
-        .carousel__slider
-            width: 100vw
-        
-    .catalog
-        padding-bottom: 50px
-        &__tabs
-            flex-direction: column
-            align-items: center
-            .catalog__tabItem
-                width: 280px
-        &__tabContent
-            justify-content: center
-        .catalog-item
-            width: 300px
-    
-    .feedback
-        .feedback__item
-            flex-direction: column
-            margin-bottom: 50px
-        .feedback__text
-            margin-top: 20px
-            margin-left: 20px
-    section.footer
-        min-height: 215px
-        iframe
-            display: none
-        .footer__contact
-            width: 320px
-    .modal
-        .modal-form
-            width: 320px
-        .modal__close
-            right: 10px
-            top: 10px
+        section.carousel 
+            min-height: 350px
+            padding: 40px 0 40px 0
+            .carousel__slider
+                width: 100vw
+            
+        .catalog
+            padding-bottom: 50px
+            &__tabs
+                flex-direction: column
+                align-items: center
+                .catalog__tabItem
+                    width: 280px
+            &__tabContent
+                justify-content: center
+            .catalog-item
+                width: 300px
+
+        .feedback
+            .feedback__item
+                flex-direction: column
+                margin-bottom: 50px
+            .feedback__text
+                margin-top: 20px
+                margin-left: 20px
+        section.footer
+            min-height: 215px
+            iframe
+                display: none
+            .footer__contact
+                width: 320px
+        .modal
+            .modal-form
+                width: 320px
+            .modal__close
+                right: 10px
+                top: 10px
+        a.toUp
+            right: 13px
+            bottom: 13px

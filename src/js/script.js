@@ -25,27 +25,89 @@ $(document).ready(function () {
             e.preventDefault();
             $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
             $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
-    })
+        });
+    });
     $('.catalog-item__linkBack').each(function (i) {
         $(this).on('click', function (e) {
             e.preventDefault();
             $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
             $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
-    })
+        });
+    });
 
     $('[data-modal=consultation]').on('click', function () {
         $('.modal, #consultation').fadeIn();
-    })
+    });
     $('.modal__close').on('click', function () {
         $('.modal, #consultation, #order, #thanks').fadeOut();
-    })
+    });
     $('.button_catalog').each(function (i) {
         $(this).on('click', function () {
             $('#order .modal-form__descr').text($('.catalog-item__subtitle').eq(i).text());
             $('.modal, #order').fadeIn();
-        })
-    })
+        });
+    });
+    function formValidate(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                phone: "required",
+                email: {
+                    required: true,
+
+                }
+            },
+            messages: {
+                name: {
+                    required: 'Пожалуйста, ведите ваше имя!',
+                    minlength: jQuery.validator.format("минимум {0} символа!")
+                },
+                phone: 'Пожалуйста, введите ваш номер телефона!',
+                email: {
+                    required: 'Пожалуйста, введите вашу почту!',
+                    email: 'Пожалуйста, введите правильную почту!'
+                }
+
+            }
+        });
+    }
+    formValidate('#order form');
+    formValidate('.form form');
+    formValidate('#consultation form');
+    $('input[name=phone]').mask("+7(999) 999-99-99");
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            $('.toUp').fadeIn();
+        }
+        else {
+            $('.toUp').fadeOut();
+        }
+    });
+
+    $("a[href^='#']").click(function () {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find('input').val('');
+            $('#consultation, #order').fadeOut();
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
 });
 
