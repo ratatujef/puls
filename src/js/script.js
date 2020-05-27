@@ -41,6 +41,13 @@ $(document).ready(function () {
     $('.modal__close').on('click', function () {
         $('.modal, #consultation, #order, #thanks').fadeOut();
     });
+    //(закрытие формы по клику внеобласти)
+    $(document).mouseup(function (e) {
+        let container = $('.modal, #consultation, #order, #thanks');
+        if (container.has(e.target).length === 0) {
+            container.fadeOut();
+        }
+    });
     $('.button_catalog').each(function (i) {
         $(this).on('click', function () {
             $('#order .modal-form__descr').text($('.catalog-item__subtitle').eq(i).text());
